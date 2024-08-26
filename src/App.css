@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web";
+}
+
+
+.Products_container {
+  padding: 2% 4%;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-gap: 0.5rem;
+  
+}
+
+.Products_menu_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.Product_menu_item {
+  padding: 15px;
+  box-shadow: 5px 4px 3px #0005;
+  background: linear-gradient(transparent, #0001);
+}
+.Product_menu_item p {
+  font-size: 10px;
+}
+.Product_menu_item *:not(img) {
+  margin-bottom: 0.5rem;
+}
+.Product_menu_item img {
+  width: 100%;
+}
+.Product_menu_item h2 {
+  text-wrap: nowrap;
+  font-size: medium;
+}
+.stars {
+  display: flex;
+  padding: 5px 0;
+}
+
+.button_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(white,lime,limegreen,forestgreen);
+  mix-blend-mode: color-burn;
+  animation: addcart 2s linear 1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes addcart {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+.Produccts_filter-Container {
+  background: linear-gradient(transparent, #0001);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+.Products-adverb-container {
+  height: 95vh;
+  position: sticky;
+  top: 0;
+}
+
+.products-advert-item {
+  width: 100%;
+  height: 30vh;
+}
+
+button:not(.grand_total_container button) {
+  height: 35px;
+  background: linear-gradient(transparent, #0001);
+  border: none;
+  box-shadow: 3px 2px 3px #0006 -3px -2px 3px #0002;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+}
+
+.products_wiew_container {
+  margin-top: 30px;
+}
+
+.counter {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.products_wiew_container .Product_menu_item {
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+  margin-top: 15px;
+}
+.counter button {
+  height: 30px;
+  width: 30px;
+}
+header {
+  width: 100%;
+  padding: 2% 6%;
+  background: linear-gradient(#fff, #efefef);
+  z-index: 5;
+  box-shadow: 0 4px 5px #0005;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+header ul a {
+  text-decoration: none;
+  color: #000;
+}
+
+header svg {
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+.Card_container {
+  height: 100vh;
+  width: 100%;
+  background: #0005;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card {
+  width: 40%;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  box-shadow: -4px 0 5px #0006;
+  overflow: auto;
+}
+
+.cart_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart_top svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+marquee {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.cart_item {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  padding: 5px;
+  background: #fff;
+}
+
+.cart_item img {
+  width: 60%;
+}
+
+.cart_content {
+  background: #0001;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.cart_item * {
+  margin: auto;
+}
+
+.cart_item svg {
+  color: darkred;
+  cursor: pointer;
+}
+
+.grand_total_container {
+  width: 100%;
+  padding: 15px;
+  background: darkred;
+  color: #fff;
+  font-size: 20px;
+  position: sticky;
+  top: -20px;
+  box-shadow: 0 4px 5px #0005;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grand_total_container button {
+  height: 35px;
+  background: linear-gradient(transparent, #0001);
+  border: none;
+  box-shadow: 3px 2px 3px #0006 -3px -2px 3px #0002;
+  cursor: pointer;
+  padding: 7px 35px;
+  color: #fff;
+  border: 1px solid;
+}
+
+.cart_item button {
+  width: 30px !important;
+}
